@@ -39,8 +39,31 @@
       </div>
     </v-app-bar>
     <v-main>
-      <v-navigation-drawer :value="showDrawer">
-        sour candy
+      <v-navigation-drawer :value="showDrawer" class="pa-4">
+        <v-list>
+          <template v-for="(i, idx) in navItems">
+            <v-subheader
+              v-if="i.type === 'divider'"
+              class="px-0 text-uppercase text-red"
+              :key="idx"
+            >
+              {{ i.label }}
+              <v-spacer />
+              <v-icon size="14">{{ i.icon }}</v-icon>
+            </v-subheader>
+            <v-list-item
+              v-else
+              class="rounded px-3 mb-2 background lighten-2"
+              :class="{ primary: currentNavItem === idx }"
+              :key="idx"
+            >
+              <v-list-item-title>
+                <v-icon class="mr-1">{{ i.icon }}</v-icon>
+                {{ i.label }}
+              </v-list-item-title>
+            </v-list-item>
+          </template>
+        </v-list>
       </v-navigation-drawer>
     </v-main>
     <v-footer inset app>XD</v-footer>
@@ -71,6 +94,22 @@ export default {
 
   data: () => ({
     showDrawer: true,
+    currentNavItem: 0,
+    navItems: [
+      {
+        icon: "mdi-home",
+        label: "Dashboard",
+      },
+      {
+        icon: "mdi-home",
+        label: "Dashboard",
+      },
+      {
+        icon: "mdi-format-list-bulleted",
+        label: "Reports",
+        type: "divider",
+      },
+    ],
   }),
 };
 </script>

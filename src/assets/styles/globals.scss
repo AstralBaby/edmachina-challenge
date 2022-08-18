@@ -13,7 +13,6 @@ $font-family: "Montserrat", sans-serif;
   // so we add this extra selector to prevent vuetify from overriding our font in components where text utility classes are used.
   // some kinky solution would be using !important combined with a wildcard selector but its a bad practicy and its not recommended.
   [class*="text-"] {
-    color: #36405a;
     font-family: $font-family, sans-serif !important;
   }
   font-family: $font-family, sans-serif !important;
