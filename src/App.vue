@@ -44,7 +44,7 @@
           <template v-for="(i, idx) in navItems">
             <v-subheader
               v-if="i.type === 'divider'"
-              class="px-0 text-uppercase text-red"
+              class="px-0 text-uppercase text-red mt-4"
               :key="idx"
             >
               {{ i.label }}
@@ -101,13 +101,33 @@ export default {
         label: "Dashboard",
       },
       {
-        icon: "mdi-home",
-        label: "Dashboard",
+        icon: "mdi-calendar-blank",
+        label: "Calendar",
       },
       {
         icon: "mdi-format-list-bulleted",
         label: "Reports",
         type: "divider",
+      },
+      {
+        icon: "mdi-plus-box",
+        label: "Machina Hi",
+      },
+      {
+        icon: "mdi-arrow-top-right-thin-circle-outline",
+        label: "Heads Up",
+      },
+      {
+        icon: "mdi-cached",
+        label: "Stay Around",
+      },
+      {
+        icon: "mdi-chart-box",
+        label: "Analytics",
+      },
+      {
+        icon: "mdi-poll",
+        label: "My Reports",
       },
     ],
   }),
