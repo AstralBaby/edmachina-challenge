@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+$font-family: "Montserrat", sans-serif;
+
+.v-application {
+  background-color: var(--v-background-base) !important;
+  [class*="text-"] {
+    color: #36405a;
+    font-family: $font-family, sans-serif !important;
+  }
+  font-family: $font-family, sans-serif !important;
+}
+.v-sheet,
+.v-navigation-drawer {
+  background-color: var(--v-background-lighten1) !important;
+}

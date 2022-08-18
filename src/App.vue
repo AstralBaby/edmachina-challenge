@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import "@/assets/styles/globals.scss";
+
 export default {
   name: "App",
   created() {
@@ -67,13 +69,3 @@ export default {
   }),
 };
 </script>
-
-<style lang="scss">
-.v-application {
-  background-color: var(--v-background-base) !important;
-}
-.v-sheet,
-.v-navigation-drawer {
-  background-color: var(--v-background-lighten1) !important;
-}
-</style>
