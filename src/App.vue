@@ -1,6 +1,11 @@
 <template>
   <v-app>
-    <v-app-bar app>
+    <v-app-bar
+      app
+      dark
+      :color="$vuetify.theme.dark ? 'black' : 'primary'"
+      elevation="0"
+    >
       <v-app-bar-nav-icon @click="showDrawer = !showDrawer" />
       <img src="@/assets/logo.svg" alt="Edmachina" class="mx-1" />
       <v-spacer />
