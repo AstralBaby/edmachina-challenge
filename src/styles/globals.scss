@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+.v-application {
+  background-color: var(--v-background-base) !important;
+  .font-weight-semibold { font-weight: 600; }
+}
+.v-sheet,
+.v-navigation-drawer {
+  background-color: var(--v-background-lighten1) !important;
+}

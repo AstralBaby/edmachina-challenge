@@ -1,0 +1,119 @@
+<template>
+  <v-menu bottom nudge-bottom="55" rounded>
+    <template #activator="{ on }">
+      <div class="d-flex ml-5" v-on="on">
+        <div>
+          <div>Jane Doe</div>
+          <div>Admin</div>
+        </div>
+        <v-badge
+          bordered
+          overlap
+          color="green"
+          bottom
+          offset-x="15"
+          offset-y="15"
+        >
+          <v-avatar size="50">
+            <img
+              class="object-cover"
+              src="@/assets/avatar.png"
+              alt="Jane Doe"
+            />
+          </v-avatar>
+        </v-badge>
+      </div>
+    </template>
+    <v-card>
+      <v-list>
+        <v-list-item>
+          <v-list-item-avatar size="20">
+            <v-icon>mdi-account</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title> Profile </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider />
+        <v-menu left offset-x content-class="triangle-right">
+          <template #activator="{ on }">
+            <v-list-item v-on="on">
+              <v-list-item-content>
+                <v-list-item-title class="font-weight-semibold primary--text">
+                  Teclab
+                </v-list-item-title>
+                <v-list-item-subtitle> 12345678 </v-list-item-subtitle>
+              </v-list-item-content>
+              <v-list-item-action>
+                <v-icon color="primary">mdi-chevron-right</v-icon>
+              </v-list-item-action>
+            </v-list-item>
+          </template>
+          <v-card>xddddd</v-card>
+        </v-menu>
+        <v-divider />
+        <v-list-item>
+          <v-list-item-avatar size="20">
+            <v-icon>mdi-mail</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title> Inbox </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-avatar size="20">
+            <v-icon>mdi-bell</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title> Notifications </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider />
+        <v-list-item>
+          <v-list-item-avatar size="20">
+            <v-icon>mdi-cog</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title> Account Settings </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider />
+        <v-list-item>
+          <v-list-item-avatar size="20">
+            <v-icon>mdi-account</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title> Billing </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-avatar size="20">
+            <v-icon>mdi-account</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title> Logout </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-card>
+  </v-menu>
+</template>
+
+<script>
+export default {
+  name: "UserMenu",
+  data: () => ({}),
+};
+</script>
+
+<style scoped>
+.triangle-right::after {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 0;
+  content: "";
+  background: red;
+}
+</style>
