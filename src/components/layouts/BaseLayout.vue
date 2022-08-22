@@ -66,15 +66,15 @@
       </v-list>
     </v-navigation-drawer>
     <v-main>
-      <div class="pa-10">
+      <div class="px-10 py-5">
         <slot />
       </div>
     </v-main>
     <v-footer
       app
       inset
-      :color="$vuetify.theme.dark ? 'black' : 'primary'"
-      class="text-body-2 px-7 py-5"
+      :color="$vuetify.theme.dark ? 'black' : 'primary lighten-2'"
+      class="text-body-2 px-7 py-4"
     >
       <div class="uppercase">COPYRIGHT © 2022</div>
       <div class="font-weight-medium ml-2">Edmachina</div>
