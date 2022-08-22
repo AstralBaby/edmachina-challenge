@@ -1,5 +1,5 @@
 <template>
-  <v-menu bottom nudge-bottom="55" rounded>
+  <v-menu bottom nudge-bottom="55" rounded="lg">
     <template #activator="{ on }">
       <div class="d-flex ml-5" v-on="on">
         <div>
@@ -49,12 +49,37 @@
               </v-list-item-action>
             </v-list-item>
           </template>
-          <v-card>xddddd</v-card>
+          <div>
+            <v-card class="elevation-0">
+              <v-card-title class="accent font-weight-semibold text-body-1">
+                All Accounts
+              </v-card-title>
+              <v-divider />
+              <v-list>
+                <v-list-item>
+                  <v-list-item-content>
+                    <v-list-item-title class="grey--text lighten-2">
+                      <div class="font-weight-medium">Teclab:</div>
+                      18283129
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-content>
+                    <v-list-item-title class="grey--text lighten-2">
+                      <div class="font-weight-medium">Teclab:</div>
+                      21382138
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </v-card>
+          </div>
         </v-menu>
         <v-divider />
         <v-list-item>
-          <v-list-item-avatar size="20">
-            <v-icon>mdi-mail</v-icon>
+          <v-list-item-avatar size="22">
+            <v-icon>mdi-email</v-icon>
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title> Inbox </v-list-item-title>
@@ -106,14 +131,21 @@ export default {
 };
 </script>
 
-<style scoped>
-.triangle-right::after {
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  right: 0;
-  content: "";
-  background: red;
+<style scoped lang="scss">
+.triangle-right {
+  box-shadow: none;
+  padding-right: 20px;
+  &::after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--v-background-lighten1);
+    transform: rotate(135deg);
+    position: absolute;
+    border-radius: 3px;
+    top: 17px;
+    right: 12px;
+    content: "";
+  }
 }
 </style>

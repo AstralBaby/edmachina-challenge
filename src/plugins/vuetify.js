@@ -14,11 +14,20 @@ export default new Vuetify({
         secondary: "#fffff",
         accent: "red",
         error: "#fffff",
+        background: {
+          base: "#f6f6f6",
+          lighten1: "#fefefe",
+          lighten2: "white",
+        },
       },
       dark: {
         primary: "#F1BC01",
-        accent: "red",
-        background: "#171E31",
+        accent: "#2c354c",
+        background: {
+          base: "#171E31",
+          lighten1: "#283046",
+          lighten2: "#2f3850",
+        },
       },
     },
   },

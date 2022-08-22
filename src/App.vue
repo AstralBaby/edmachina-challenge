@@ -1,14 +1,17 @@
 <template>
-  <base-layout> content here </base-layout>
+  <base-layout>
+    <reports-view />
+  </base-layout>
 </template>
 
 <script>
 import "@/styles/globals.scss";
 import BaseLayout from "@/components/layouts/BaseLayout";
+import ReportsView from "@/components/views/ReportsView";
 
 export default {
   name: "App",
-  components: { BaseLayout },
+  components: { BaseLayout, ReportsView },
   created() {
     // Before the page is completely rendered, we validate if the user's browser color scheme preference is set to dark,
     // if so, we use the vuetify option to switch the main theme provider theme to dark.
