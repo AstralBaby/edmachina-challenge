@@ -1,12 +1,23 @@
 <template>
   <div>
+    <h1
+      class="text-h3 d-inline d-md-none"
+      :class="[$vuetify.theme.dark ? 'white--text' : 'primary--text']"
+    >
+      My Report
+    </h1>
     <div class="d-flex align-center">
-      <h1 class="text-h5 primary--text">My Report</h1>
-      <v-icon class="ml-10">mdi-file-multiple-outline</v-icon>
-      <v-icon class="ml-8">mdi-share-variant</v-icon>
+      <h1
+        class="text-h5 d-none d-md-inline"
+        :class="[$vuetify.theme.dark ? 'white--text' : 'primary--text']"
+      >
+        My Report
+      </h1>
+      <v-icon class="ml-md-10">mdi-file-multiple-outline</v-icon>
+      <v-icon class="ml-5 ml-md-8">mdi-share-variant</v-icon>
       <v-spacer />
       <v-expand-x-transition>
-        <v-chip-group v-show="showFilters">
+        <v-chip-group v-show="showFilters && !$vuetify.breakpoint.smAndDown">
           <v-chip
             class="transparent primary--text"
             :class="{ 'text--lighten-1': !$vuetify.theme.dark }"
@@ -36,7 +47,7 @@
       <v-menu
         offset-y
         left
-        content-class="rounded-lg elevation-0 rounded-tr-0 background lighten-2"
+        content-class="rounded-lg elevation-0 rounded-tr-0 background lighten-2 attached-menu__shadow"
       >
         <template #activator="{ on, value }">
           <div v-on="on">
@@ -119,6 +130,25 @@
         </v-card>
       </v-menu>
     </div>
+    <v-row>
+      <v-col sm="3" v-for="i in 4" :key="i">
+        <v-sheet height="150" class="accent rounded" />
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col sm="4" v-for="i in 3" :key="i">
+        <v-sheet height="350" class="accent rounded" />
+      </v-col>
+    </v-row>
+    <h1 class="text-h5 white--text my-3">New Group</h1>
+    <v-row>
+      <v-col sm="4">
+        <v-sheet height="350" class="accent rounded" />
+      </v-col>
+      <v-col sm="8">
+        <v-sheet height="350" class="accent rounded" />
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -161,4 +191,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.attached-menu__shadow {
+  box-shadow: 2px 20px 20px #00000024 !important;
+}
+</style>

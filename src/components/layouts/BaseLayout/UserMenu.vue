@@ -139,7 +139,7 @@ export default {
     display: block;
     width: 20px;
     height: 20px;
-    background-color: var(--v-background-lighten1);
+    background-color: var(--v-accent-base);
     transform: rotate(135deg);
     position: absolute;
     border-radius: 3px;
