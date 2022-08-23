@@ -14,11 +14,20 @@
         class="mx-1 d-none d-md-inline"
       />
       <v-spacer />
-      <v-icon class="mx-1">mdi-magnify</v-icon>
-      <v-icon class="mx-1">mdi-light</v-icon>
-      <v-icon class="mx-1">mdi-cog</v-icon>
+      <v-icon class="">mdi-magnify</v-icon>
+      <v-icon
+        @click="$vuetify.theme.dark = false"
+        class="ml-4"
+        v-if="$vuetify.theme.dark"
+      >
+        mdi-white-balance-sunny
+      </v-icon>
+      <v-icon @click="$vuetify.theme.dark = true" class="ml-4" v-else
+        >mdi-weather-night</v-icon
+      >
+      <v-icon class="ml-4">mdi-cog</v-icon>
       <v-badge content="1" overlap color="red">
-        <v-icon>mdi-bell</v-icon>
+        <v-icon class="ml-4">mdi-bell</v-icon>
       </v-badge>
       <user-menu />
     </v-app-bar>
