@@ -29,7 +29,7 @@
       <v-badge content="1" overlap color="red">
         <v-icon class="ml-4">mdi-bell</v-icon>
       </v-badge>
-      <user-menu />
+      <user-menu :user="{ ...user, currentAccount, accounts }" />
     </v-app-bar>
     <v-navigation-drawer :value="showDrawer" clipped app>
       <v-list class="pa-4">
@@ -93,6 +93,7 @@
 
 <script>
 import UserMenu from "@/components/layouts/BaseLayout/UserMenu";
+import { mapGetters } from "vuex";
 
 export default {
   name: "BaseLayout",
@@ -136,6 +137,9 @@ export default {
       },
     ],
   }),
+  computed: {
+    ...mapGetters("SessionStore", ["user", "accounts", "currentAccount"]),
+  },
 };
 </script>
 
