@@ -82,7 +82,7 @@
     <v-footer
       app
       inset
-      :color="$vuetify.theme.dark ? 'black' : 'primary lighten-2'"
+      :class="[$vuetify.theme.dark ? 'black' : 'primary lighten-2 white--text']"
       class="text-body-2 px-7 py-4"
     >
       <div class="uppercase">COPYRIGHT © 2022</div>
