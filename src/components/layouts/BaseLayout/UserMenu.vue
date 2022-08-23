@@ -1,8 +1,8 @@
 <template>
   <v-menu bottom nudge-bottom="55" rounded="lg">
     <template #activator="{ on }">
-      <div class="d-flex ml-5" v-on="on">
-        <div>
+      <div class="d-flex ml-6 align-center cursor-pointer" v-on="on">
+        <div class="leading-normal">
           <div>Jane Doe</div>
           <div>Admin</div>
         </div>
@@ -35,7 +35,11 @@
           </v-list-item-content>
         </v-list-item>
         <v-divider />
-        <v-menu left offset-x content-class="triangle-right">
+        <v-menu
+          left
+          offset-x
+          content-class="triangle-right attached-menu__shadow"
+        >
           <template #activator="{ on }">
             <v-list-item v-on="on">
               <v-list-item-content>
@@ -140,11 +144,13 @@ export default {
     width: 20px;
     height: 20px;
     background-color: var(--v-accent-base);
-    transform: rotate(135deg);
+    transform: rotate(137deg);
     position: absolute;
-    border-radius: 3px;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: var(--v-background-base);
     top: 17px;
-    right: 12px;
+    right: 10px;
     content: "";
   }
 }

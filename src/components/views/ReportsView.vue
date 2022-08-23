@@ -190,9 +190,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.attached-menu__shadow {
-  box-shadow: 2px 20px 20px #00000024 !important;
-}
-</style>
